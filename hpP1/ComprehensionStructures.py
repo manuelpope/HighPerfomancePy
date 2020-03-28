@@ -19,6 +19,7 @@ newDict= {elem: len(elem) for elem in l}
 print(newDict)
 
 #time measures
+#forma super lenta
 
 start = time.time()
 newList = []
