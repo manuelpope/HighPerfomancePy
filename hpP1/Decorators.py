@@ -1,5 +1,6 @@
 import time
-import Lambda
+
+
 def func1():
     print(1)
 def myDecor(func):
@@ -43,7 +44,6 @@ def createBigBetterList(size):
     return [x for x in range(0,size)]
 
 
-Lambda.
 
 createBigBetterList(100000)
 createBigList(100000)
