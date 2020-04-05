@@ -45,6 +45,6 @@ def createBigBetterList(size):
 
 
 
-createBigBetterList(100000)
+createBigBetterList(32000000)
 createBigList(100000)
 
