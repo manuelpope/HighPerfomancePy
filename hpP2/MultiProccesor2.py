@@ -8,7 +8,9 @@ print('multi processing python')
 #totalmente diferente multi processing
 # processorX has memoryX, couldnt share memory but could be join manually
 # by global variables at the end
-from multiprocessing import Process
+import  time
+import numpy
+from multiprocessing import Process, Pool
 from common.CommonFuncTesting import funcSimple, funcSquare,funcCube
 
 def fSimple(l):
@@ -30,6 +32,8 @@ def fCube(l):
         sum +=i**3
     print(sum)
 
+def logExp(x):
+    return numpy.log(x)
 
 
 def doSomething():
@@ -46,6 +50,12 @@ def doSomething():
     processCube.join()
     processSimple.join()
     processSquare.join()
-
+#map is sync and lock each processor , async could be quicker.
 if __name__ == "__main__":
     doSomething()
+    start = time.time()
+    pool= Pool(processes= 8)
+    inputList = [elem for elem in range (1,10000000)]
+    result = pool.map_async(logExp ,inputList)
+    end = time.time()
+    print(end - start , "seconds")
