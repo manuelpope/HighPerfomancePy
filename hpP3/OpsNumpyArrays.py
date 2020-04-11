@@ -1,5 +1,5 @@
 import numpy as np
-
+import scipy.linalg as lg
 
 arr1= np.array([elem for elem in range (1,5)])
 arr1*2
@@ -18,4 +18,4 @@ print(np.multiply(randomArr,arr1))
 #es mucho mas rapido numpy 14x
 #------------------------------------------------------------
 
-lg.det(randomArr)
+print(lg.det(randomArr))
