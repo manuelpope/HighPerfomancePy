@@ -7,4 +7,4 @@ def fib(n):
     while b < n:
         a, b = b, a + b
 
-    print(b)
+    print(b,a)
